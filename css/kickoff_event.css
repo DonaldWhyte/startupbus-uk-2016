@@ -1,0 +1,37 @@
+.country-section img {
+    width: 80px;
+}
+
+.fact {
+    display: inline-block;
+    text-align: center;
+    margin: 0 16px !important;
+}
+
+.fact-icon img {
+    width: 100px;
+}
+
+.fact-icon img path {
+    fill: white;
+}
+
+.big-fact-icon img {
+    width: 160px;
+}
+
+.fact-text {
+    font-size: 30px !important;
+}
+
+.big-fact-text {
+    font-size: 40px !important;
+}
+
+.fact-role {
+    color: #5555ff;
+}
+
+img[alt="press"] {
+    width: 800px;
+}
