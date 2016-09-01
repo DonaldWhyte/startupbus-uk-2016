@@ -14,6 +14,16 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <!-- Used for world map generation -->
+    <link rel="stylesheet" media="all" href="css/jquery-jvectormap-2.0.3.css"/>
+   <!-- <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery-jvectormap-world-mill.js"></script>-->
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <!-- I recommend you host this file on your own, since this will change without warning -->
+    <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
+
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
@@ -28,15 +38,42 @@
       <div class="slides">
         <section>
           <div data-markdown>
-            ## StartupBus UK
-
             ![startupbus_uk](images/startupbus_uk.png)
+
+            ## StartupBus UK 2016
           </div>
         </section>
 
         <section>
           <section data-markdown>
-            TODO: StartupBus origins
+            ## What is StartupBus?
+          </section>
+
+          <section data-markdown>
+          Hackathon
+
+          Road trip
+
+          Global community
+          </section>
+
+          <section data-markdown>
+          1. Put **top talent** on a bus
+          2. Three days to **build and launch** a product
+          3. Teams **pitch** their products at a conference
+          </section>
+
+          <section data-markdown data-notes="
+This initial event in 2010 started a movement, and a community was built around it.
+
+Now the competition runs annually in:
+
+">
+          Now an annual competition in:
+
+          * Europe
+          * Australia
+          * North America
           </section>
 
           <section>
@@ -46,7 +83,7 @@
             </div>
 
             <div class="fact">
-              <div class="fact-icon"><img src="images/kickoff_event/buspreneur_icon.svg" alt="Buspreneur" /></div>
+              <div class="fact-icon"><img src="images/kickoff_event/buspreneurs.svg" alt="Buspreneur" /></div>
               <div class="fact-text">1238 buspreneurs</div>
             </div>
 
@@ -74,7 +111,7 @@ morocco /
 nigeria /
 tunisia
 ">
-            16 countries
+            15 countries
 
             ![uk](images/kickoff_event/countries/united-kingdom.svg)
             ![usa](images/kickoff_event/countries/united-states-of-america.svg)
@@ -95,37 +132,44 @@ tunisia
           </section>
 
           <section data-markdown>
-            TODO
+            ### Former Buspreneurs
+
+            ![former_buspreneurs](images/kickoff_event/former_buspreneurs.png)
           </section>
 
           <section data-markdown>
-            TODO: companies that come from founders of STB + valuations
-          </section>
+            ### Outreach
 
-          <section data-markdown>
             ![press](images/kickoff_event/press.png)
           </section>
+
+          <section data-markdown>
+            ### Alumni Companies
+
+            ![alumni_companies](images/kickoff_event/alumni_companies.png)
+          </section>
         </section>
 
         <section>
+          <section data-markdown>
+            ### StartupBus Europe 2016
+
+            September 2nd → September 7th
+
+            ![startupbus_europe](images/startupbus_europe.png)
+          </section>
+
+          <section data-markdown>
+            ![europe_buses](images/kickoff_event/europe_buses.png)
+          </section>
+
           <section data-markdown>
             ![uk_route](images/kickoff_event/uk_route.svg)
-          </section>
-
-          <section data-markdown>
-            ![europe_buses](images/kickoff_event/europe_buses.svg)
-          </section>
-        </section>
-
-        <section>
-          <section data-markdown>
-            ## Participants
           </section>
 
           <section>
             <h3>26 participants</h3>
 
-            <div class="fact-table" style="display: inline-block">
             <div class="fact">
               <div class="fact-icon"><img src="images/kickoff_event/hustler.svg" /></div>
               <div class="fact-text">25% <span class="fact-role">hustlers</span></div>
@@ -139,7 +183,6 @@ tunisia
             <div class="fact">
               <div class="fact-icon"><img src="images/kickoff_event/designer.svg" /></div>
               <div class="fact-text">25% <span class="fact-role">designers</span></div>
-            </div>
             </div>
           </section>
 
@@ -162,60 +205,82 @@ tunisia
             ![usa](images/kickoff_event/countries/united-states-of-america.svg)
           </section>
 
-          <section data-markdown data-notes="
-TODO
-">
-            TODO
-          </section>
-
-          <section data-markdown data-notes="
-google
-ibm
-bloomberg
-expedia
-lse
-trainline
-vixt
-
-gigster
-sports direct
-turinglab
-
-cap gemini
-microsoft
-arts alliance media
-granttree
-sky
-dft
-
-">
-            ### Corporates, startups and freelancers
-
-            ![Google](images/kickoff_event/companies/google.svg)
-
+          <section data-markdown class="company-section">
+            ![Google](images/kickoff_event/companies/google.png)
             ![IBM](images/kickoff_event/companies/ibm.svg)
-
             ![Bloomberg](images/kickoff_event/companies/bloomberg.svg)
+            ![Expedia](images/kickoff_event/companies/expedia.png)
+            ![London School of Economics](images/kickoff_event/companies/lse.png)
 
-            ![Expedia](images/kickoff_event/companies/expedia.svg)
-
-            ![London School of Economics](images/kickoff_event/companies/lse.svg)
-
-            ![Trainline](images/kickoff_event/companies/trainline.svg)
-
-            ![Microsoft](images/kickoff_event/companies/microsoft.svg)
-
+            ![Trainline](images/kickoff_event/companies/trainline.gif)
+            ![Microsoft](images/kickoff_event/companies/microsoft.png)
             ![Cap Gemini](images/kickoff_event/companies/cap_gemini.svg)
-
             ![Sky](images/kickoff_event/companies/sky.svg)
-
             ![Department for Transport](images/kickoff_event/companies/dft.svg)
 
-            ![Vixt](images/kickoff_event/companies/vixt.svg)
-
-            ![GrantTree](images/kickoff_event/companies/granttree.svg)
-
+            ![Cyber-Duck](images/kickoff_event/companies/cyber_duck.svg)
+            ![Vixt](images/kickoff_event/companies/vixt.png)
+            ![GrantTree](images/kickoff_event/companies/granttree.jpg)
             ![Arts Alliance Media](images/kickoff_event/companies/aam.svg)
+
+            Corporates, startups and freelancers
+          </section>
+
+          <section>
+            <h3>Mentors</h3>
+
+            <div style="width: 80px; display: inline-block"></div>
+
+            <div class="profile-section first">
+              <img src="images/kickoff_event/patrick.jpg" /><br />
+              <p>Patrick Croot</p>
+              <p>Developer at AAM</p>
+            </div>
+
+            <div class="profile-section">
+              <img src="images/kickoff_event/gregory.jpg" /><br />
+              <p>Gregory Giagnocavo</p>
+              <p>Serial Entrepreneur</p>
+            </div>
+
+            <div class="profile-section">
+              <img src="images/kickoff_event/paulina.jpg" /><br />
+              <p>Paulina Sygulska</p>
+              <p>Director of GrantTree</p>
+            </div>
+
+            <div class="profile-section">
+              <img src="images/kickoff_event/daniel.jpg" /><br />
+              <p>Daniel Tenner</p>
+              <p>Founder of GrantTree</p>
+            </div>
+          </section>
+
+          <section>
+            <h3>Organisers</h3>
+
+
+            <div class="profile-section first">
+              <img src="images/kickoff_event/blank.jpg" style="width: 60px !important;" />
+            </div>
+
+            <div class="profile-section first">
+              <img src="images/kickoff_event/donald.jpg" />
+              <p>Donald Whyte</p>
+              <p>Infrastructure Engineer</p>
+            </div>
+
+            <div class="profile-section">
+              <img src="images/kickoff_event/bianca_furtuna.jpg" />
+              <p>Bianca Furtuna</p>
+              <p>Machine Learning</p>
+            </div>
+
+            <div class="profile-section">
+              <img src="images/kickoff_event/tina.jpg" />
+              <p>Tina Gogna</p>
+              <p>Big Data Analytics</p>
+            </div>
           </section>
         </section>
 
@@ -224,7 +289,48 @@ dft
         </section>
 
         <section>
-          <section>
+          <section data-markdown data-notes="
+Let's say a big thank to our sponsors. Without their support, StartupBus wouldn't
+exist.
+
+We wouldn't be able to take our participants on such an amazing trip!
+">
+            ## Sponsors
+
+            ![aam_sponsor](images/kickoff_event/companies/aam.svg)
+
+            ![bb_sponsor](images/kickoff_event/companies/bloomberg.svg)
+            ![cap_sponsor](images/kickoff_event/companies/cap_gemini.svg)
+
+            ![sa_sponsor](images/kickoff_event/companies/strategy_academy.svg)
+            ![cduck_sponsor](images/kickoff_event/companies/cyber_duck.svg)
+          </section>
+
+          <section data-markdown>
+            ![Huckletree](images/kickoff_event/companies/huckletree.png)
+          </section>
+
+          <section data-markdown data-notes="
+Paul Papadimitrou, who will be giving a talk
+
+Ridin' the Wave, a panel discussion on trending tech and its role in product development.
+">
+            ## Event Schedule
+
+            **Rich Phillips** — Arts Alliance Media
+
+            **Becky Plummer** — Bloomberg
+
+            **Paul Papadimitrou** — Founder of Intelligencr
+
+            **Ridin' the Wave** — panel discussion
+          </section>
+
+          <section data-background="images/kickoff_event/beer.jpg">
+          </section>
+
+          <section data-background-color="black">
+            <!-- Intentionally empty -->
           </section>
         </section>
       </div>
@@ -245,6 +351,24 @@ dft
           { src: 'plugin/notes/notes.js', async: true },
           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ]
+      });
+
+      // Generate StartupBus map
+      var sbWorldMap = new Datamap({
+        element: document.getElementById("sb-world-map"),
+        projection: 'mercator',
+        fills: {
+          defaultFill: "#ABDDA4",
+          authorHasTraveledTo: "#fa0fa0"
+        },
+        data: {
+          USA: { fillKey: "authorHasTraveledTo" },
+          JPN: { fillKey: "authorHasTraveledTo" },
+          ITA: { fillKey: "authorHasTraveledTo" },
+          CRI: { fillKey: "authorHasTraveledTo" },
+          KOR: { fillKey: "authorHasTraveledTo" },
+          DEU: { fillKey: "authorHasTraveledTo" },
+        }
       });
     </script>
   </body>
