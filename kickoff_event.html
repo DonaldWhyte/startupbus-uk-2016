@@ -16,13 +16,6 @@
 
     <!-- Used for world map generation -->
     <link rel="stylesheet" media="all" href="css/jquery-jvectormap-2.0.3.css"/>
-   <!-- <script src="js/jquery-1.8.2.min.js"></script>
-    <script src="js/jquery-jvectormap-world-mill.js"></script>-->
-
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <!-- I recommend you host this file on your own, since this will change without warning -->
-    <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
 
     <!-- Printing and PDF exports -->
     <script>
@@ -351,24 +344,6 @@ Ridin' the Wave, a panel discussion on trending tech and its role in product dev
           { src: 'plugin/notes/notes.js', async: true },
           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ]
-      });
-
-      // Generate StartupBus map
-      var sbWorldMap = new Datamap({
-        element: document.getElementById("sb-world-map"),
-        projection: 'mercator',
-        fills: {
-          defaultFill: "#ABDDA4",
-          authorHasTraveledTo: "#fa0fa0"
-        },
-        data: {
-          USA: { fillKey: "authorHasTraveledTo" },
-          JPN: { fillKey: "authorHasTraveledTo" },
-          ITA: { fillKey: "authorHasTraveledTo" },
-          CRI: { fillKey: "authorHasTraveledTo" },
-          KOR: { fillKey: "authorHasTraveledTo" },
-          DEU: { fillKey: "authorHasTraveledTo" },
-        }
       });
     </script>
   </body>
