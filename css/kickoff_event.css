@@ -1,0 +1,111 @@
+.country-section img {
+    width: 80px;
+}
+
+.company-section img {
+    max-width: 140px;
+    max-height: 80px
+}
+
+.fact {
+    display: inline-block;
+    text-align: center;
+    margin: 0 16px !important;
+}
+
+.fact-icon img {
+    width: 100px;
+}
+
+.fact-icon img path {
+    fill: white;
+}
+
+.big-fact-icon img {
+    width: 160px;
+}
+
+.fact-text {
+    font-size: 30px !important;
+}
+
+.big-fact-text {
+    font-size: 40px !important;
+}
+
+.fact-role {
+    color: #5555ff;
+}
+
+img[alt="press"] {
+    width: 750px;
+}
+
+img[alt="former_buspreneurs"] {
+    width: 750px;
+}
+
+img[alt="alumni_companies"] {
+    width: 750px;
+}
+
+img[alt="Buspreneur"] {
+    width: 140px;
+}
+
+img[alt="startupbus_uk"] {
+    width: 400px;
+}
+
+img[alt="startupbus_europe"] {
+    width: 400px;
+}
+
+img[alt="europe_buses"] {
+    width: 600px;
+}
+
+img[alt="Huckletree"] {
+    width: 300px;
+}
+
+img[alt="aam_sponsor"] {
+    width: 200px;
+}
+
+img[alt="bb_sponsor"] {
+    width: 300px;
+    margin-right: 75px !important;
+}
+
+img[alt="cap_sponsor"] {
+    width: 300px;
+}
+
+img[alt="cduck_sponsor"] {
+    width: 125px;
+}
+
+img[alt="sa_sponsor"] {
+    width: 250px;
+    margin-right: 75px !important;
+}
+
+img[alt="tattoo"] {
+    width: 400px;
+}
+
+.profile-section {
+    float: left;
+    margin: 0px 20px !important;
+}
+
+.profile-section img {
+    width: 180px;
+    margin: 0 !important;
+}
+
+.profile-section p {
+    margin: 0px;
+    font-size: 20px !important;
+}
