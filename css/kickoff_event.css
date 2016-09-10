@@ -91,6 +91,10 @@ img[alt="sa_sponsor"] {
     margin-right: 75px !important;
 }
 
+img[alt="tattoo"] {
+    width: 400px;
+}
+
 .profile-section {
     float: left;
     margin: 0px 20px !important;
